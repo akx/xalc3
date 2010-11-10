@@ -1,17 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-
 using LuaInterface;
 
 namespace Xalc3
 {
-	/// <summary>
-	/// Description of MainForm.
-	/// </summary>
 	public partial class MainForm : Form
 	{
 		Lua lua;
@@ -39,7 +34,6 @@ namespace Xalc3
 		
 		void EntryBoxKeyPress(object sender, KeyPressEventArgs e)
 		{
-			//System.Diagnostics.Debug.Print("kc = {0}", (int)e.KeyChar);
 			if(e.KeyChar == 13) {
 				string line = entryBox.Text.Trim();
 				if(line == "") {
@@ -57,7 +51,6 @@ namespace Xalc3
 		
 		void EntryBoxKeyDown(object sender, KeyEventArgs e)
 		{
-			System.Diagnostics.Debug.Print("kc = {0}", e.KeyCode);
 			if(e.KeyCode == Keys.Up) {
 				if(history.Count > 0) {
 					int pos = entryBox.SelectionStart;
